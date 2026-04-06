@@ -1,0 +1,50 @@
+{
+	"greeting": "Welkom bij AI IDE BAS!",
+	"introduction": "Met een reeks ingebouwde en uitbreidbare Modi laat AI IDE BAS je plannen, ontwerpen, coderen, debuggen en je productiviteit verhogen als nooit tevoren.",
+	"notice": "Om te beginnen heeft deze extensie een API-provider nodig.",
+	"start": "Aan de slag!",
+	"routers": {
+		"requesty": {
+			"description": "Jouw geoptimaliseerde LLM-router",
+			"incentive": "$1 gratis tegoed"
+		},
+		"openrouter": {
+			"description": "Een uniforme interface voor LLM's"
+		}
+	},
+	"chooseProvider": "Om zijn magie te doen, heeft AI IDE BAS een API-sleutel nodig.",
+	"startRouter": "We raden aan om een LLM-router te gebruiken:",
+	"startCustom": "Of je kunt je eigen API-sleutel gebruiken:",
+	"telemetry": {
+		"title": "Help AI IDE BAS verbeteren",
+		"anonymousTelemetry": "Stuur anonieme fout- en gebruiksgegevens om ons te helpen bugs op te lossen en de extensie te verbeteren. Er worden nooit code, prompts of persoonlijke gegevens verzonden.",
+		"changeSettings": "Je kunt dit altijd wijzigen onderaan de <settingsLink>instellingen</settingsLink>",
+		"settings": "instellingen",
+		"allow": "Toestaan",
+		"deny": "Weigeren"
+	},
+	"importSettings": "Instellingen importeren"
+,
+  "cloudCta": {
+    "social": {
+      "telegram": "Telegram",
+      "youtube": "YouTube",
+      "vk": "VK",
+      "github": "GitHub",
+      "instagram": "Instagram"
+    },
+    "title": "AI IDE BAS: je AI‑assistent voor analytics",
+    "desc": "Genereer documentatie, stel eisen op en maak projectartefacten veel sneller met AI.",
+    "features": {
+      "bonus": "Welkomstbonus. Ontvang gratis DeepSeek‑tokens direct na registratie.",
+      "productionArtifacts": "Genereer echte artefacten afgestemd op je ontwikkelprocessen.",
+      "inviteFriends": "Nodig vrienden uit. Vergroot je bonusbalans per uitnodiging en werk samen.",
+      "googleSignIn": "Inloggen met Google. Snel starten zonder wachtwoorden.",
+      "workAnywhere": "Werk overal. Maak cloudprojecten en deel resultaten."
+    },
+    "support": "Problemen? Neem contact op met ons team.",
+    "signInWithGoogle": "Inloggen met Google",
+    "openingBrowser": "Browser openen...",
+    "checkBrowserWindow": "💡 Controleer of het autorisatievenster in je browser is geopend"
+  }
+}

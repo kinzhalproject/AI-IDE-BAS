@@ -1,0 +1,49 @@
+{
+	"greeting": "¡Bienvenido a AI IDE BAS!",
+	"introduction": "Con una variedad de Modos integrados y extensibles, AI IDE BAS te permite planificar, arquitectar, codificar, depurar y aumentar tu productividad como nunca antes.",
+	"notice": "Para comenzar, esta extensión necesita un proveedor de API.",
+	"start": "¡Vamos!",
+	"routers": {
+		"requesty": {
+			"description": "Tu router LLM optimizado",
+			"incentive": "$1 de crédito gratis"
+		},
+		"openrouter": {
+			"description": "Una interfaz unificada para LLMs"
+		}
+	},
+	"chooseProvider": "Para hacer su magia, AI IDE BAS necesita una clave API.",
+	"startRouter": "Recomendamos usar un router LLM:",
+	"startCustom": "O puedes traer tu propia clave API:",
+	"telemetry": {
+		"title": "Ayuda a mejorar AI IDE BAS",
+		"anonymousTelemetry": "Envía datos de uso y errores anónimos para ayudarnos a corregir errores y mejorar la extensión. Nunca se envía código, texto o información personal.",
+		"changeSettings": "Siempre puedes cambiar esto en la parte inferior de la <settingsLink>configuración</settingsLink>",
+		"settings": "configuración",
+		"allow": "Permitir",
+		"deny": "Denegar"
+	},
+	"importSettings": "Importar configuración",
+	"cloudCta": {
+		"social": {
+			"telegram": "Telegram",
+			"youtube": "YouTube",
+			"vk": "VK",
+			"github": "GitHub",
+			"instagram": "Instagram"
+		},
+		"title": "AI IDE BAS: Tu asistente de IA para analítica",
+		"desc": "Genera documentos y artefactos con AI IDE BAS usando plantillas listas de expertos de nuestro equipo — más rápido y con mejor calidad que un LLM convencional.\n\n💡Empieza eligiendo un rol y, en el campo del prompt, indica el proyecto y el artefacto necesario; la IA comenzará a trabajar en el documento. Consulta la <guideLink>guía completa</guideLink> para trabajar con AI IDE BAS.",
+		"features": {
+			"bonus": "Bono de bienvenida: obtén tokens DeepSeek gratis después de registrarte.",
+			"productionArtifacts": "Genera artefactos directamente para tus procesos de desarrollo.",
+			"inviteFriends": "Invita a tus amigos: +1000 al saldo de bonificación por cada invitación.",
+			"googleSignIn": "Inicia sesión con Google: inicio rápido sin contraseñas.",
+			"workAnywhere": "Trabajo en la nube: comparte resultados con colegas."
+		},
+		"support": "¿Tienes dificultades? <supportLink>Ponte en contacto con nuestro equipo</supportLink>.",
+		"signInWithGoogle": "Iniciar sesión con Google",
+		"openingBrowser": "Abriendo navegador...",
+		"checkBrowserWindow": "💡 Verifica si se abrió la ventana de autorización en tu navegador"
+	}
+}

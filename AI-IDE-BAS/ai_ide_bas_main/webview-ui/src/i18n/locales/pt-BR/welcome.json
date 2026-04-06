@@ -1,0 +1,50 @@
+{
+	"greeting": "Bem-vindo ao AI IDE BAS!",
+	"introduction": "Com uma variedade de Modos integrados e extensíveis, o AI IDE BAS permite que você planeje, arquitete, codifique, depure e aumente sua produtividade como nunca antes.",
+	"notice": "Para começar, esta extensão precisa de um provedor de API.",
+	"start": "Vamos lá!",
+	"routers": {
+		"requesty": {
+			"description": "Seu roteador LLM otimizado",
+			"incentive": "$1 de crédito grátis"
+		},
+		"openrouter": {
+			"description": "Uma interface unificada para LLMs"
+		}
+	},
+	"chooseProvider": "Para fazer sua mágica, o AI IDE BAS precisa de uma chave API.",
+	"startRouter": "Recomendamos usar um roteador LLM:",
+	"startCustom": "Ou você pode trazer sua própria chave API:",
+	"telemetry": {
+		"title": "Ajude a melhorar o AI IDE BAS",
+		"anonymousTelemetry": "Envie dados de uso e erros anônimos para nos ajudar a corrigir bugs e melhorar a extensão. Nenhum código, texto ou informação pessoal é enviado.",
+		"changeSettings": "Você sempre pode mudar isso na parte inferior das <settingsLink>configurações</settingsLink>",
+		"settings": "configurações",
+		"allow": "Permitir",
+		"deny": "Negar"
+	},
+	"importSettings": "Importar configurações"
+,
+  "cloudCta": {
+    "social": {
+      "telegram": "Telegram",
+      "youtube": "YouTube",
+      "vk": "VK",
+      "github": "GitHub",
+      "instagram": "Instagram"
+    },
+    "title": "AI IDE BAS: seu assistente de IA para análise",
+    "desc": "Gere documentação, requisitos e artefatos de projeto muito mais rápido com IA.\n\n💡 Consulte o <guideLink>guia completo</guideLink> para trabalhar com AI IDE BAS.",
+    "features": {
+      "bonus": "Bônus de boas‑vindas. Receba tokens DeepSeek gratuitos após o cadastro.",
+      "productionArtifacts": "Gere artefatos reais adaptados aos seus processos de desenvolvimento.",
+      "inviteFriends": "Convide amigos. Aumente seu saldo de bônus a cada convite e colabore.",
+      "googleSignIn": "Entrar com Google. Início rápido sem senhas.",
+      "workAnywhere": "Trabalhe de qualquer lugar. Crie projetos na nuvem e compartilhe resultados."
+    },
+    "support": "Teve dificuldades? <supportLink>Entre em contato com nossa equipe</supportLink>.",
+    "signInWithGoogle": "Entrar com Google",
+    "openingBrowser": "Abrindo o navegador...",
+    "checkBrowserWindow": "💡 Verifique se a janela de autorização foi aberta no navegador"
+  }
+}

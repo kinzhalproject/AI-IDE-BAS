@@ -1,0 +1,50 @@
+{
+	"greeting": "AI IDE BAS'a Hoş Geldin!",
+	"introduction": "Yerleşik ve genişletilebilir Modlar yelpazesiyle AI IDE BAS, daha önce hiç olmadığı gibi planlama, mimari tasarım, kodlama, hata ayıklama ve üretkenliğini artırmanı sağlar.",
+	"notice": "Başlamak için bu eklentinin bir API sağlayıcısına ihtiyacı var.",
+	"start": "Hadi başlayalım!",
+	"routers": {
+		"requesty": {
+			"description": "Optimize edilmiş LLM yönlendiricin",
+			"incentive": "$1 ücretsiz kredi"
+		},
+		"openrouter": {
+			"description": "LLM'ler için birleşik bir arayüz"
+		}
+	},
+	"chooseProvider": "Sihirini yapabilmesi için AI IDE BAS'ın bir API anahtarına ihtiyacı var.",
+	"startRouter": "Bir LLM yönlendiricisi kullanmanı öneririz:",
+	"startCustom": "Veya kendi API anahtarını kullanabilirsin:",
+	"telemetry": {
+		"title": "AI IDE BAS'ı Geliştirmeye Yardım Et",
+		"anonymousTelemetry": "Hataları düzeltmemize ve eklentiyi geliştirmemize yardımcı olmak için anonim hata ve kullanım verileri gönder. Hiçbir zaman kod, metin veya kişisel bilgi gönderilmez.",
+		"changeSettings": "Bunu her zaman <settingsLink>ayarlar</settingsLink>ın altından değiştirebilirsin",
+		"settings": "ayarlar",
+		"allow": "İzin Ver",
+		"deny": "Reddet"
+	},
+	"importSettings": "Ayarları İçe Aktar"
+,
+  "cloudCta": {
+    "social": {
+      "telegram": "Telegram",
+      "youtube": "YouTube",
+      "vk": "VK",
+      "github": "GitHub",
+      "instagram": "Instagram"
+    },
+    "title": "AI IDE BAS: Analitik için yapay zeka asistanınız",
+    "desc": "AI ile dokümantasyonu, gereksinimleri ve proje çıktıları çok daha hızlı oluşturun.",
+    "features": {
+      "bonus": "Hoş geldin bonusu. Kayıttan hemen sonra ücretsiz DeepSeek jetonları alın.",
+      "productionArtifacts": "Geliştirme süreçlerinize uygun gerçek çıktı üretin.",
+      "inviteFriends": "Arkadaşlarınızı davet edin. Her davet için bonus bakiyenizi artırın ve birlikte çalışın.",
+      "googleSignIn": "Google ile oturum açın. Parolasız hızlı başlangıç.",
+      "workAnywhere": "Her yerden çalışın. Bulut projeleri oluşturun ve sonuçları paylaşın."
+    },
+    "support": "Zorluk mu yaşıyorsunuz? Ekibimizle iletişime geçin.",
+    "signInWithGoogle": "Google ile oturum aç",
+    "openingBrowser": "Tarayıcı açılıyor...",
+    "checkBrowserWindow": "💡 Tarayıcıda yetkilendirme penceresinin açılıp açılmadığını kontrol edin"
+  }
+}

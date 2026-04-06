@@ -1,0 +1,152 @@
+import fs from "fs/promises"
+import path from "path"
+import { Mode } from "../../../shared/modes"
+import { formatLanguage } from "../../../shared/language"
+import { fileExistsAtPath } from "../../../utils/fs"
+import * as vscode from "vscode"
+
+export type PromptVariables = {
+	workspace?: string
+	mode?: string
+	language?: string
+	shell?: string
+	operatingSystem?: string
+}
+
+function interpolatePromptContent(content: string, variables: PromptVariables): string {
+	let interpolatedContent = content
+	for (const key in variables) {
+		if (
+			Object.prototype.hasOwnProperty.call(variables, key) &&
+			variables[key as keyof PromptVariables] !== undefined
+		) {
+			const placeholder = new RegExp(`\\{\\{${key}\\}\\}`, "g")
+			interpolatedContent = interpolatedContent.replace(placeholder, variables[key as keyof PromptVariables]!)
+		}
+	}
+	return interpolatedContent
+}
+
+/**
+ * Safely reads a file, returning an empty string if the file doesn't exist
+ */
+async function safeReadFile(filePath: string): Promise<string> {
+	try {
+		const content = await fs.readFile(filePath, "utf-8")
+		// When reading with "utf-8" encoding, content should be a string
+		return content.trim()
+	} catch (err) {
+		const errorCode = (err as NodeJS.ErrnoException).code
+		if (!errorCode || !["ENOENT", "EISDIR"].includes(errorCode)) {
+			throw err
+		}
+		return ""
+	}
+}
+
+/**
+ * Get the path to a system prompt file for a specific mode
+ */
+export function getSystemPromptFilePath(cwd: string, mode: Mode, language?: string): string {
+    const lang = language ? formatLanguage(language) : "en"
+    if (lang && lang !== "en") {
+        return path.join(cwd, ".roo", lang, `system-prompt-${mode}`)
+    }
+    return path.join(cwd, ".roo", `system-prompt-${mode}`)
+}
+
+// Map mode slugs to built-in prompt filenames
+// ⚠️ ВАЖНО: Имена файлов соответствуют slug из БД (code, ask, debug и т.д.)
+function getBuiltinPromptFilename(mode: Mode): string | undefined {
+    switch (mode) {
+        case "code":
+            return "code.txt"
+        case "architect":
+            return "architect.txt"
+        case "ask":
+            return "ask.txt"
+        case "debug":
+            return "debug.txt"
+        case "designer":
+            return "designer.txt"
+        case "helper":
+            return "helper.txt"
+        case "pm":
+            return "pm.txt"
+        default:
+            return undefined
+    }
+}
+
+/**
+ * Loads custom system prompt from a file at .roo/system-prompt-[mode slug]
+ * If the file doesn't exist, tries to load from the extension's dist/prompts/[filename]
+ * If neither exists, returns an empty string
+ */
+export async function loadSystemPromptFile(cwd: string, mode: Mode, variables: PromptVariables): Promise<string> {
+    // 1) Project-local override: .roo/<lang>/system-prompt-[mode] → .roo/system-prompt-[mode]
+    const lang = variables.language ? formatLanguage(variables.language) : "en"
+    const langProjectFilePath = (lang && lang !== "en") ? getSystemPromptFilePath(cwd, mode, lang) : ""
+    let rawContent = langProjectFilePath ? await safeReadFile(langProjectFilePath) : ""
+    if (!rawContent) {
+        const projectFilePath = getSystemPromptFilePath(cwd, mode)
+        rawContent = await safeReadFile(projectFilePath)
+    }
+    if (rawContent) {
+        return interpolatePromptContent(rawContent, variables)
+    }
+
+    // 2) Built-in prompts packaged with the extension: try dist/prompts/<lang>/<file> → dist/prompts/en/<file> → dist/prompts/<file>
+    const filename = getBuiltinPromptFilename(mode)
+    if (filename) {
+        const extension = vscode.extensions.getExtension("8eton.ai-ide-bas")
+        if (extension) {
+            const candidates: string[] = []
+            // Try language-specific first (if not English)
+            if (lang && lang !== "en") {
+                candidates.push(`dist/prompts/${lang}/${filename}`)
+            }
+            // Explicit en fallback
+            candidates.push(`dist/prompts/en/${filename}`)
+            // Legacy location without language subfolder
+            candidates.push(`dist/prompts/${filename}`)
+
+            for (const rel of candidates) {
+                try {
+                    const uri = vscode.Uri.joinPath(extension.extensionUri, ...rel.split("/"))
+                    const content = await fs.readFile(uri.fsPath, "utf-8")
+                    const trimmed = content.trim()
+                    if (trimmed) {
+                        return interpolatePromptContent(trimmed, variables)
+                    }
+                } catch {
+                    // try next candidate
+                }
+            }
+        }
+    }
+    return ""
+}
+
+/**
+ * Ensures the .roo directory exists, creating it if necessary
+ */
+export async function ensureRooDirectory(cwd: string): Promise<void> {
+	const rooDir = path.join(cwd, ".roo")
+
+	// Check if directory already exists
+	if (await fileExistsAtPath(rooDir)) {
+		return
+	}
+
+	// Create the directory
+	try {
+		await fs.mkdir(rooDir, { recursive: true })
+	} catch (err) {
+		// If directory already exists (race condition), ignore the error
+		const errorCode = (err as NodeJS.ErrnoException).code
+		if (errorCode !== "EEXIST") {
+			throw err
+		}
+	}
+}

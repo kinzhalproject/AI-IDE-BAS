@@ -1,0 +1,50 @@
+{
+	"greeting": "Witaj w AI IDE BAS!",
+	"introduction": "Dzięki szerokiej gamie wbudowanych i rozszerzalnych Trybów, AI IDE BAS pozwala planować, projektować architekturę, kodować, debugować i zwiększać produktywność jak nigdy dotąd.",
+	"notice": "Aby rozpocząć, to rozszerzenie potrzebuje dostawcy API.",
+	"start": "Zaczynajmy!",
+	"routers": {
+		"requesty": {
+			"description": "Twój zoptymalizowany router LLM",
+			"incentive": "$1 darmowego kredytu"
+		},
+		"openrouter": {
+			"description": "Ujednolicony interfejs dla LLMs"
+		}
+	},
+	"chooseProvider": "Aby działać, AI IDE BAS potrzebuje klucza API.",
+	"startRouter": "Zalecamy korzystanie z routera LLM:",
+	"startCustom": "Lub możesz użyć własnego klucza API:",
+	"telemetry": {
+		"title": "Pomóż ulepszyć AI IDE BAS",
+		"anonymousTelemetry": "Wyślij anonimowe dane o błędach i użyciu, aby pomóc nam w naprawianiu błędów i ulepszaniu rozszerzenia. Nigdy nie są wysyłane żadne kody, teksty ani informacje osobiste.",
+		"changeSettings": "Zawsze możesz to zmienić na dole <settingsLink>ustawień</settingsLink>",
+		"settings": "ustawienia",
+		"allow": "Zezwól",
+		"deny": "Odmów"
+	},
+	"importSettings": "Importuj ustawienia"
+,
+  "cloudCta": {
+    "social": {
+      "telegram": "Telegram",
+      "youtube": "YouTube",
+      "vk": "VK",
+      "github": "GitHub",
+      "instagram": "Instagram"
+    },
+    "title": "AI IDE BAS: Twój asystent AI do analityki",
+    "desc": "Generuj dokumentację, wymagania i artefakty projektowe znacznie szybciej dzięki AI.",
+    "features": {
+      "bonus": "Bonus powitalny. Otrzymaj darmowe tokeny DeepSeek zaraz po rejestracji.",
+      "productionArtifacts": "Generuj rzeczywiste artefakty dopasowane do twoich procesów wytwórczych.",
+      "inviteFriends": "Zaproś znajomych. Zwiększ saldo bonusowe za każde zaproszenie i współpracuj.",
+      "googleSignIn": "Zaloguj się przez Google. Szybki start bez haseł.",
+      "workAnywhere": "Pracuj z dowolnego miejsca. Twórz projekty w chmurze i udostępniaj wyniki."
+    },
+    "support": "Masz trudności? Skontaktuj się z naszym zespołem.",
+    "signInWithGoogle": "Zaloguj się przez Google",
+    "openingBrowser": "Otwieranie przeglądarki...",
+    "checkBrowserWindow": "💡 Sprawdź, czy w przeglądarce otworzyło się okno autoryzacji"
+  }
+}

@@ -1,0 +1,50 @@
+{
+	"greeting": "AI IDE BASへようこそ！",
+	"introduction": "組み込みおよび拡張可能なモードを備えたAI IDE BASは、計画、アーキテクチャ設計、コーディング、デバッグ、そして今までにない生産性向上を可能にします。",
+	"notice": "開始するには、この拡張機能にはAPIプロバイダーが必要です。",
+	"start": "さあ、始めましょう！",
+	"routers": {
+		"requesty": {
+			"description": "最適化されたLLMルーター",
+			"incentive": "$1の無料クレジット"
+		},
+		"openrouter": {
+			"description": "LLMsのための統一インターフェース"
+		}
+	},
+	"chooseProvider": "AI IDE BASが機能するには、APIキーが必要です。",
+	"startRouter": "LLMルーターの使用をお勧めします：",
+	"startCustom": "または、あなた自身のAPIキーを使用できます：",
+	"telemetry": {
+		"title": "AI IDE BASの改善にご協力ください",
+		"anonymousTelemetry": "バグの修正と拡張機能の改善のため、匿名のエラーと使用データを送信してください。コード、プロンプト、個人情報は一切送信されません。",
+		"changeSettings": "<settingsLink>設定</settingsLink>の下部でいつでも変更できます",
+		"settings": "設定",
+		"allow": "許可",
+		"deny": "拒否"
+	},
+	"importSettings": "設定をインポート"
+,
+  "cloudCta": {
+    "social": {
+      "telegram": "Telegram",
+      "youtube": "YouTube",
+      "vk": "VK",
+      "github": "GitHub",
+      "instagram": "Instagram"
+    },
+    "title": "AI IDE BAS：アナリティクスのためのAIアシスタント",
+    "desc": "ドキュメント、要件、プロジェクト成果物をAIでより速く生成します。",
+    "features": {
+      "bonus": "ウェルカムボーナス。登録後すぐにDeepSeekトークンを獲得。",
+      "productionArtifacts": "開発プロセスに合わせた実用的な成果物を生成。",
+      "inviteFriends": "友達を招待。招待ごとにボーナス残高が増え、共同作業が可能に。",
+      "googleSignIn": "Googleでログイン。パスワード不要の素早い開始。",
+      "workAnywhere": "どこからでも作業。クラウドプロジェクトを作成し結果を共有。"
+    },
+    "support": "お困りですか？私たちのチームにご連絡ください。",
+    "signInWithGoogle": "Googleでログイン",
+    "openingBrowser": "ブラウザを開いています...",
+    "checkBrowserWindow": "💡 ブラウザで認可ウィンドウが開いたか確認してください"
+  }
+}
